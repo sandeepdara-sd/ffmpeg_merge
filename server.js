@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("/static", express.static(path.join(__dirname, "public")));
 
 app.use("/", (req,res)=>{
-  res.send("Api is workign fine, go and merge now...");
+  res.send("Api is working fine, go and merge now...");
 })
 
 app.post("/merge", async (req, res) => {
