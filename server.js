@@ -14,9 +14,10 @@ app.use("/static", express.static(path.join(__dirname, "public")));
 app.post("/merge", async (req, res) => {
   const { video_urls } = req.body;
 
-if (!Array.isArray(video_urls) || video_urls.length === 0) {
-  return res.status(400).json({ error: "Send at least 1 video URL" });
-}
+  if (!Array.isArray(video_urls) || video_urls.length === 0) {
+    return res.status(400).json({ error: "Send exactly 6 video URLs" });
+  }
+
 
 
   const tempDir = path.join(__dirname, "temp");
