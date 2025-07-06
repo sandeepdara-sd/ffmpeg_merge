@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 app.use("/static", express.static(path.join(__dirname, "public")));
 
-app.get("/",(req,res)=>{
-  res.send("Api is working, go and merge now....")
-})
+// app.get("/",(req,res)=>{
+//   res.send("Api is working, go and merge now....")
+// })
 
 app.post("/merge", async (req, res) => {
   const { video_urls } = req.body;
