@@ -73,6 +73,9 @@ app.post("/merge", async (req, res) => {
   }
 });
 
+app.get("/",(req,res)=>{
+  res.send("Api is Working!!... Go and merge now........")
+})
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
